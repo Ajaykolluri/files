@@ -5,7 +5,7 @@ client = pymongo.MongoClient("localhost:27017")
 db = client["12"]
 collection = db["devices"]
 def filter():
-    df = pd.read_excel("C:\\Users\\admin\\Downloads\\raw.xlsx",engine= 'openpyxl')
+    df = pd.read_csv("https://raw.githubusercontent.com/Ajaykolluri/files/main/raw_data.csv")
     dff = df.sort_values(["device_fk_id","time_stamp"],ascending=False)
     return dff
 
