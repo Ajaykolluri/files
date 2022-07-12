@@ -7,7 +7,7 @@ from db_script import filter,dbInsert
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/devices/getLatest", methods = ["GET"])
+@app.route("/devices/getLatest", methods=["GET"])
 def  latest():
     try:
         body = request.args.get("deviceId")
@@ -32,7 +32,7 @@ def  latest():
                             "message": "Error: "+ str(err),
                         }),500
 
-@app.route("/devices/getLatLong", methods = ["GET"])
+@app.route("/devices/getLatLong", methods=["GET"])
 def  latlong():
     try:
         body = request.args.get("deviceId")
@@ -64,7 +64,7 @@ def  latlong():
                             "message": "Error: "+ str(err),
                         }),500
 
-@app.route("/devices/getLatLongTime", methods = ["POST"])
+@app.route("/devices/getLatLongTime", methods=["POST"])
 def  timePeriod():
     try:
         body = request.get_json()
